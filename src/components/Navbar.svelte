@@ -1,7 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { bounceIn, bounceOut, cubicOut, elasticOut, expoOut, quartOut } from 'svelte/easing';
-	import { fade, fly, scale } from 'svelte/transition';
+	import {
+		bounceIn,
+		bounceOut,
+		cubicOut,
+		elasticInOut,
+		elasticOut,
+		expoOut,
+		quartOut
+	} from 'svelte/easing';
+	import { fade, fly, scale, slide } from 'svelte/transition';
 
 	let {
 		dark,
@@ -13,6 +21,9 @@
 
 	let BUTTONS = ['about', 'skills', 'experience', 'contact', 'resume'];
 	let buttonsVisible = $state(false);
+	let menuButtonsVisible = $state(false);
+	let menuOpen = $state(false);
+
 	onMount(() => {
 		// set buttons to visible when component mounts.
 		buttonsVisible = true;
@@ -51,17 +62,31 @@
             `
 		};
 	}
-
+	// vertical open animation for logo, title, and toggle theme button
 	function verticalOpen(node: HTMLElement, { duration = 400 } = {}) {
 		return {
 			duration,
 			css: (t: number) => `
             transform: scaleY(${t});
-            transform-origin: center; /* Updated from top to center */
+            transform-origin: center;
         `
 		};
 	}
 </script>
+
+{#snippet toggleButton(forMenu: boolean)}
+	<button
+		transition:verticalOpen
+		class={'rounded-lg border-2 border-solid border-[#4b5563] px-2 hover:bg-gray-200 dark:border-white/80 dark:text-[#f9fafb] dark:hover:bg-gray-600 ' +
+			(forMenu ? 'w-[150px] py-2' : 'w-[90px] py-1')}
+		onclick={() => toggleTheme()}
+	>
+		<div class="flex items-center justify-center space-x-2 text-sm">
+			<i class={'fa-solid ' + (dark ? 'fa-sun' : 'fa-moon')}></i>
+			<span>{dark ? 'Light' : 'Dark'}</span>
+		</div>
+	</button>
+{/snippet}
 
 <nav
 	id="navbar"
@@ -70,7 +95,7 @@
 	{#if buttonsVisible}
 		<img
 			transition:verticalOpen
-			class="h-10 w-10"
+			class=" h-10 w-10"
 			src="assets\images\Jlogo.jpg"
 			alt="Jimmy Van Logo"
 		/>
@@ -79,34 +104,86 @@
 		>
 	{/if}
 
-	<div class="ml-auto flex items-center justify-center">
+	<div class="ml-auto hidden items-center justify-center lg:flex">
 		{#each BUTTONS as button, index}
 			{#if buttonsVisible}
 				<button
 					transition:flyAndScale={{ duration: 500 + index * 100, delay: index * 100 }}
 					class="nav__text m-5 capitalize"
 				>
-					<span class="px-2">{button}</span>
+					<span class="px-3">{button}</span>
 				</button>
 			{/if}
 		{/each}
 		{#if buttonsVisible}
-			<button
-				transition:verticalOpen
-				class="w-[90px] rounded-lg border-2 border-solid border-[#4b5563] px-2 py-1 hover:bg-gray-200 dark:border-white/80 dark:hover:bg-gray-600"
-				onclick={() => toggleTheme()}
-			>
-				<div class="flex items-center justify-center space-x-2">
-					<i class={'fa-solid ' + (dark ? 'fa-sun' : 'fa-moon')}></i>
-					<span>{dark ? 'Light' : 'Dark'}</span>
-				</div>
-			</button>
+			{@render toggleButton(false)}
 		{/if}
 	</div>
+
+	<button
+		aria-label="Open navigation menu"
+		onclick={() => (menuOpen = true)}
+		class="m-5 ml-auto text-xl lg:hidden"
+	>
+		<i class="fa-solid fa-burger"></i>
+	</button>
+	{#if menuOpen}
+		<div class="fixed inset-0 z-50 backdrop-blur-md">
+			<dialog
+				open={menuOpen}
+				transition:slide={{ duration: 500 }}
+				class="fixed left-0 right-0 top-0 z-50 w-full bg-white/80 p-0 px-6 py-4 shadow-md dark:bg-gray-900/90"
+				onintroend={() => {
+					// Delay making buttons visible until the slide transition finishes
+					menuButtonsVisible = true;
+				}}
+				onoutrostart={() => {
+					// Immediately hide buttons when the dialog starts closing
+					menuButtonsVisible = false;
+				}}
+			>
+				<div class="dialog__container">
+					<button
+						aria-label="Close navigation menu"
+						onclick={() => (menuOpen = false)}
+						class="ml-auto flex justify-center rounded-lg bg-gray-200/80 px-3 py-2 text-sm text-gray-800 dark:bg-white/10 dark:text-gray-50"
+					>
+						<i class="fa-solid fa-x"></i>
+					</button>
+					<nav class="flex flex-col items-center overflow-x-hidden">
+						{#each BUTTONS as button, index}
+							{#if menuButtonsVisible}
+								<button
+									transition:fly={{
+										x: index % 2 === 0 ? -400 : 400,
+										delay: 200,
+										duration: 700
+									}}
+									class="nav__text nav__text-menu m-2 bg-gray-200/80 px-3 py-2 text-xl capitalize dark:bg-white/10"
+								>
+									<span class="p-10">{button}</span>
+								</button>
+							{/if}
+						{/each}
+
+						{#if menuButtonsVisible}
+							<div class="mt-5">
+								{@render toggleButton(true)}
+							</div>
+						{/if}
+					</nav>
+				</div>
+			</dialog>
+		</div>
+	{/if}
 </nav>
 
 <style>
 	#navbar {
 		transition: transform 0.3s;
+	}
+	.dialog__container {
+		height: 55vh;
+		overflow-y: auto;
 	}
 </style>

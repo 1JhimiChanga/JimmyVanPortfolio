@@ -21,6 +21,13 @@ html.dark {
 	height: 1.5rem;
 }
 
+.nav__text-menu {
+	font-size: 1.1em;
+	height: 7vh;
+	width: 100%;
+	border-radius: 5px;
+}
+
 .nav__text-home {
 	display: flex;
 	align-items: center;
