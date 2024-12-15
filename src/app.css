@@ -2,12 +2,66 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.nav-text {
-  @apply font-mono text-sm font-semibold;
-  @apply text-gray-800 dark:text-gray-50;
-  @apply hover:bg-gray-600 hover:text-gray-50;
-  @apply dark:hover:bg-gray-50 dark:focus:bg-gray-50 dark:hover:text-gray-800 dark:focus:text-gray-800;
-  @apply transition-colors focus:outline-none;
-  transition-duration: 0.25s !important;
+html {
+	@apply text-black;
 }
 
+html.dark {
+	@apply text-white;
+}
+
+.nav__text {
+	@apply font-mono text-sm font-semibold;
+	@apply text-gray-800 dark:text-gray-50;
+	@apply hover:bg-gray-600 hover:text-gray-50;
+	@apply dark:hover:bg-gray-50 dark:hover:text-gray-800 dark:focus:bg-gray-50 dark:focus:text-gray-800;
+	@apply transition-colors focus:outline-none;
+	transition-duration: 0.25s !important;
+	border-radius: 10px;
+	height: 1.5rem;
+}
+
+.nav__text-home {
+	display: flex;
+	align-items: center;
+	font-weight: 600;
+	border-radius: 10px;
+	height: 1.7rem;
+	color: #2d3748;
+	transition:
+		background-color 0.25s,
+		color 0.25s !important;
+}
+
+.nav__text-home:hover {
+	background-color: #4b5563;
+	color: #f7fafc;
+}
+
+html.dark .nav__text-home {
+	color: #f7fafc;
+}
+
+html.dark .nav__text-home:hover {
+	background-color: #f9fafb;
+	color: #2d3748;
+}
+
+.nav__text:hover {
+	background-color: #4b5563;
+	color: #f9fafb;
+}
+
+.nav__text:focus {
+	outline: none;
+}
+
+html.dark .nav__text {
+	color: #f9fafb;
+}
+
+html.dark .nav__text:hover,
+html.dark .nav__text:focus {
+	background-color: #f9fafb;
+	color: #2d3748;
+}

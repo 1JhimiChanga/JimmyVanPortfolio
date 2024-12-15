@@ -1,75 +1,112 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { bounceIn, bounceOut, cubicOut, elasticOut, expoOut, quartOut } from 'svelte/easing';
-    import {fade, fly, scale} from 'svelte/transition'
+	import { fade, fly, scale } from 'svelte/transition';
 
-    let BUTTONS = ['about', 'skills', 'experience', 'contact', 'resume']
-    let buttonsVisible = $state(false);
-    onMount(() => {
-    // set buttons to visible when component mounts.
-    buttonsVisible = true;
+	let {
+		dark,
+		toggleTheme
+	}: {
+		dark: boolean;
+		toggleTheme: () => void;
+	} = $props();
 
-    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    let prevScrollPos = window.scrollY;
-    const navbar = document.getElementById("navbar");
-    if(navbar){
-        window.onscroll = () => {
-        const currentScrollPos = window.scrollY;
-        if (prevScrollPos > currentScrollPos)
-            navbar.style.transform = "translateY(0)";
-        else navbar.style.transform = `translateY(-${navbar.offsetHeight}px)`;
+	let BUTTONS = ['about', 'skills', 'experience', 'contact', 'resume'];
+	let buttonsVisible = $state(false);
+	onMount(() => {
+		// set buttons to visible when component mounts.
+		buttonsVisible = true;
 
-        prevScrollPos = currentScrollPos;
-    };
+		/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+		let prevScrollPos = window.scrollY;
+		const navbar = document.getElementById('navbar');
+		if (navbar) {
+			window.onscroll = () => {
+				const currentScrollPos = window.scrollY;
+				if (prevScrollPos > currentScrollPos) navbar.style.transform = 'translateY(0)';
+				else navbar.style.transform = `translateY(-${navbar.offsetHeight}px)`;
 
-    // show navbar when hover over
-    onmousemove = (e) => {
-        if (e.clientY < navbar.offsetHeight)
-            navbar.style.transform = "translateY(0)";
-    };
-    }
-    
-  });
+				prevScrollPos = currentScrollPos;
+			};
 
-     // Custom 3D "fly-in" and "scale" transition function
-    function flyAndScale(
-        node: HTMLElement,
-        { delay = 0, duration = 500, easing = cubicOut, scaleStart = 0 }
-    ) {
-        return {
-            delay,
-            duration,
-            easing,
-            css: (t: number) => `
+			// show navbar when hover over
+			onmousemove = (e) => {
+				if (e.clientY < navbar.offsetHeight) navbar.style.transform = 'translateY(0)';
+			};
+		}
+	});
+
+	// Custom 3D "fly-in" and "scale" transition function
+	function flyAndScale(
+		node: HTMLElement,
+		{ delay = 0, duration = 500, easing = cubicOut, scaleStart = 0 }
+	) {
+		return {
+			delay,
+			duration,
+			easing,
+			css: (t: number) => `
                 transform: scale(${scaleStart + t * (1 - scaleStart)}) translateZ(${(1 - t) * 100}px);
          
-            `,
-        };
-    }
+            `
+		};
+	}
+
+	function verticalOpen(node: HTMLElement, { duration = 400 } = {}) {
+		return {
+			duration,
+			css: (t: number) => `
+            transform: scaleY(${t});
+            transform-origin: center; /* Updated from top to center */
+        `
+		};
+	}
 </script>
 
-<nav id="navbar" class="flex items-center gap-4 px-6 lg:px-10 top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blue-md shadow-md fixed w-full z-50">
-    
-    <img class="w-10 h-10" src="assets\images\Jlogo.jpg" alt="Jimmy Van Logo">
-     <a href="/#home" data-aos="flip-up" class="nav-text-home">Jimmy Van</a>
+<nav
+	id="navbar"
+	class="backdrop-blue-md fixed top-0 z-50 flex w-full items-center gap-4 bg-white/80 px-6 shadow-md dark:bg-gray-900/80 lg:px-10"
+>
+	{#if buttonsVisible}
+		<img
+			transition:verticalOpen
+			class="h-10 w-10"
+			src="assets\images\Jlogo.jpg"
+			alt="Jimmy Van Logo"
+		/>
+		<a transition:verticalOpen href="/#home" data-aos="flip-up" class="nav__text-home px-2"
+			>Jimmy Van</a
+		>
+	{/if}
 
-    <div  class="ml-auto">
-        {#each BUTTONS as button, index}
-            {#if buttonsVisible}
-                <button 
-                    transition:flyAndScale="{{ duration: 500 + index * 100, delay: index * 100 }}"
-                    class="m-5 capitalize">
-                    <span>{button}</span>
-                </button>   
-            {/if}
-        {/each}
-    </div>
-       
-  
+	<div class="ml-auto flex items-center justify-center">
+		{#each BUTTONS as button, index}
+			{#if buttonsVisible}
+				<button
+					transition:flyAndScale={{ duration: 500 + index * 100, delay: index * 100 }}
+					class="nav__text m-5 capitalize"
+				>
+					<span class="px-2">{button}</span>
+				</button>
+			{/if}
+		{/each}
+		{#if buttonsVisible}
+			<button
+				transition:verticalOpen
+				class="w-[90px] rounded-lg border-2 border-solid border-[#4b5563] px-2 py-1 hover:bg-gray-200 dark:border-white/80 dark:hover:bg-gray-600"
+				onclick={() => toggleTheme()}
+			>
+				<div class="flex items-center justify-center space-x-2">
+					<i class={'fa-solid ' + (dark ? 'fa-sun' : 'fa-moon')}></i>
+					<span>{dark ? 'Light' : 'Dark'}</span>
+				</div>
+			</button>
+		{/if}
+	</div>
 </nav>
 
 <style>
-    #navbar {
-        transition: transform 0.3s; /* Transition effect when sliding down (and up) */
-    }
+	#navbar {
+		transition: transform 0.3s;
+	}
 </style>
