@@ -107,12 +107,13 @@
 	<div class="ml-auto hidden items-center justify-center lg:flex">
 		{#each BUTTONS as button, index}
 			{#if buttonsVisible}
-				<button
+				<a
+					href={'#' + button}
 					transition:flyAndScale={{ duration: 500 + index * 100, delay: index * 100 }}
 					class="nav__text m-5 capitalize"
 				>
 					<span class="px-3">{button}</span>
-				</button>
+				</a>
 			{/if}
 		{/each}
 		{#if buttonsVisible}
@@ -153,7 +154,8 @@
 					<nav class="flex flex-col items-center overflow-x-hidden">
 						{#each BUTTONS as button, index}
 							{#if menuButtonsVisible}
-								<button
+								<a
+									href={'#' + button}
 									transition:fly={{
 										x: index % 2 === 0 ? -400 : 400,
 										delay: 50,
@@ -162,7 +164,7 @@
 									class="nav__text nav__text-menu m-2 bg-gray-200/80 px-3 py-2 text-xl capitalize dark:bg-white/10"
 								>
 									<span class="p-10">{button}</span>
-								</button>
+								</a>
 							{/if}
 						{/each}
 

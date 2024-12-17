@@ -4,6 +4,7 @@
 
 html {
 	@apply text-black;
+	scroll-behavior: smooth;
 }
 
 html.dark {
@@ -19,6 +20,9 @@ html.dark {
 	transition-duration: 0.25s !important;
 	border-radius: 10px;
 	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .nav__text-menu {
