@@ -156,8 +156,8 @@
 								<button
 									transition:fly={{
 										x: index % 2 === 0 ? -400 : 400,
-										delay: 200,
-										duration: 700
+										delay: 50,
+										duration: 500
 									}}
 									class="nav__text nav__text-menu m-2 bg-gray-200/80 px-3 py-2 text-xl capitalize dark:bg-white/10"
 								>
