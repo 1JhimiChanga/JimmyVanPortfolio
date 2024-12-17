@@ -11,6 +11,12 @@ html.dark {
 	@apply text-white;
 }
 
+h1,
+h2,
+h3 {
+	font-family: 'Roboto', monospace;
+}
+
 .nav__text {
 	@apply font-mono text-sm font-semibold;
 	@apply text-gray-800 dark:text-gray-50;

@@ -77,7 +77,7 @@
 {#snippet toggleButton(forMenu: boolean)}
 	<button
 		transition:verticalOpen
-		class={'rounded-lg border-2 border-solid border-[#4b5563] px-2 hover:bg-gray-200 dark:border-white/80 dark:text-[#f9fafb] dark:hover:bg-gray-600 ' +
+		class={'dark:text-custom-white-theme rounded-lg border-2 border-solid border-[#4b5563] px-2 hover:bg-gray-200 dark:border-white/80 dark:hover:bg-gray-600 ' +
 			(forMenu ? 'w-[150px] py-2' : 'w-[90px] py-1')}
 		onclick={() => toggleTheme()}
 	>
