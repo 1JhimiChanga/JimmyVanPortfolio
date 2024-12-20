@@ -22,7 +22,7 @@
 				delay: 300,
 				duration: 1000
 			}}
-			class="ml-auto h-full w-[35vw] bg-green-200"
+			class="moving-gradient-1 ml-auto h-full w-[35vw]"
 		></div>
 	{/if}
 
