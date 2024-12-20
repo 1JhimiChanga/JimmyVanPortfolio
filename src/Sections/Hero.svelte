@@ -4,6 +4,8 @@
 	import { fly } from 'svelte/transition';
 
 	let typewriterStage = $state(1);
+
+	//Controls the landing animation state
 	let landed = $state(false);
 
 	onMount(() => {
@@ -15,6 +17,7 @@
 	id="home"
 	class="flex h-screen w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-[#2a374a]"
 >
+	<!-- Check if the landing animation should run -->
 	{#if landed}
 		<div
 			transition:fly={{
@@ -25,13 +28,14 @@
 			class="moving-gradient-1 ml-auto h-full w-[35vw]"
 		></div>
 	{/if}
-
+	<!-- Main container for the introduction text -->
 	<div
 		class="dark: absolute flex h-2/6 w-5/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90"
 	>
 		<div class="absolute ml-5 h-3/6 w-1 bg-[#d8b4fe]"></div>
 		<div class="ml-20">
 			<div class="flex flex-row items-baseline">
+				<!-- Typewriter effect for the introductory text -->
 				<Typewriter
 					cursor={true}
 					interval={50}
@@ -45,6 +49,7 @@
 					<span class="mr-5 font-roboto text-5xl font-bold">I'm</span>
 				</Typewriter>
 
+				<!-- Second typewriter effect for dynamic names -->
 				{#if typewriterStage === 2}
 					<Typewriter
 						cursor={true}
@@ -64,7 +69,7 @@
 			<h3 class="mb-7 mt-4 text-xl text-gray-500/100 dark:text-gray-300/100">
 				I deliver web experiences built to industry standards. Take a look around!
 			</h3>
-
+			<!-- Call-to-action buttons -->
 			<button
 				class={'mr-3 h-8 w-32 rounded-sm border-[2px] border-[#7dd3fc]  bg-blue-200 hover:bg-blue-300'}
 			>
@@ -80,6 +85,7 @@
 </section>
 
 <style>
+	/* Styling for typewriter cursor */
 	:root {
 		--cursor-color: #d8b4fe;
 		--cursor-width: 5px;

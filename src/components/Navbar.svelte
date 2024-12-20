@@ -1,15 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import {
-		bounceIn,
-		bounceOut,
-		cubicOut,
-		elasticInOut,
-		elasticOut,
-		expoOut,
-		quartOut
-	} from 'svelte/easing';
-	import { fade, fly, scale, slide } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
+	import { fly, slide } from 'svelte/transition';
 
 	let {
 		dark,
@@ -47,7 +39,7 @@
 		}
 	});
 
-	// Custom 3D "fly-in" and "scale" transition function
+	// Custom 3D "fly-in" and "scale" transition for nav buttons
 	function flyAndScale(
 		node: HTMLElement,
 		{ delay = 0, duration = 500, easing = cubicOut, scaleStart = 0 }
@@ -62,6 +54,7 @@
             `
 		};
 	}
+
 	// vertical open animation for logo, title, and toggle theme button
 	function verticalOpen(node: HTMLElement, { duration = 400 } = {}) {
 		return {
@@ -75,9 +68,10 @@
 </script>
 
 {#snippet toggleButton(forMenu: boolean)}
+	<!-- Toggle button for theme switching -->
 	<button
 		transition:verticalOpen
-		class={'dark:text-custom-white-theme rounded-lg border-2 border-solid border-[#4b5563] px-2 hover:bg-gray-200 dark:border-white/80 dark:hover:bg-gray-600 ' +
+		class={'rounded-lg border-2 border-solid border-[#4b5563] px-2 hover:bg-gray-200 dark:border-white/80 dark:text-custom-white-theme dark:hover:bg-gray-600 ' +
 			(forMenu ? 'w-[150px] py-2' : 'w-[90px] py-1')}
 		onclick={() => toggleTheme()}
 	>
@@ -92,6 +86,7 @@
 	id="navbar"
 	class="backdrop-blue-md fixed top-0 z-50 flex w-full items-center gap-4 bg-white/80 px-6 shadow-md dark:bg-gray-900/80 lg:px-10"
 >
+	<!-- Logo and title with vertical opening transition -->
 	{#if buttonsVisible}
 		<img
 			transition:verticalOpen
@@ -103,7 +98,7 @@
 			>Jimmy Van</a
 		>
 	{/if}
-
+	<!-- Navigation buttons for desktop view -->
 	<div class="ml-auto hidden items-center justify-center lg:flex">
 		{#each BUTTONS as button, index}
 			{#if buttonsVisible}
@@ -120,7 +115,7 @@
 			{@render toggleButton(false)}
 		{/if}
 	</div>
-
+	<!-- Hamburger menu for smaller screens -->
 	<button
 		aria-label="Open navigation menu"
 		onclick={() => (menuOpen = true)}
@@ -128,6 +123,8 @@
 	>
 		<i class="fa-solid fa-burger"></i>
 	</button>
+
+	<!-- Mobile -->
 	{#if menuOpen}
 		<div class="fixed inset-0 z-50 backdrop-blur-md">
 			<dialog
