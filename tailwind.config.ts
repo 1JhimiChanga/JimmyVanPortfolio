@@ -10,6 +10,9 @@ export default {
 				'vscode-yellow': '#ead84e',
 				'vscode-string-brown': '#976037',
 				'custom-white-theme': '#f9fafb'
+			},
+			fontFamily: {
+				roboto: ['Roboto', 'monospace'] // Add 'Roboto' with monospace fallback
 			}
 		}
 	},
