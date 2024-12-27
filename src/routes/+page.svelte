@@ -1,6 +1,5 @@
-
-<script>
-	import Main from "../Sections/Main.svelte";
+<script lang="ts">
+	import Main from '../Sections/Main.svelte';
 </script>
 
-<Main/>
+<Main />

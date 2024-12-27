@@ -12,6 +12,6 @@
 </script>
 
 <div class:dark>
-	<Navbar {dark} toggleTheme={() => dark = !dark}/>
+	<Navbar {dark} toggleTheme={() => (dark = !dark)} />
 	{@render children()}
 </div>
