@@ -30,11 +30,13 @@
 	{/if}
 	<!-- Main container for the introduction text -->
 	<div
-		class="dark: absolute flex h-2/6 w-5/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90"
+		class=" absolute flex h-2/6 w-11/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90 sm:w-10/12 md:w-10/12 lg:w-8/12 2xl:w-5/12"
 	>
-		<div class="absolute ml-5 h-3/6 w-1 bg-[#d8b4fe]"></div>
-		<div class="ml-20">
-			<div class="flex flex-row items-baseline">
+		<div class="absolute ml-5 hidden h-3/6 w-1 bg-[#d8b4fe] md:flex"></div>
+		<div class="ml-6 md:ml-14">
+			<div
+				class="flex flex-row items-baseline font-roboto text-lg font-bold md:text-2xl lg:text-3xl xl:text-4xl"
+			>
 				<!-- Typewriter effect for the introductory text -->
 				<Typewriter
 					cursor={true}
@@ -44,9 +46,9 @@
 					mode="cascade"
 					on:done={() => (typewriterStage += 1)}
 				>
-					<span class="font-roboto text-5xl font-bold">console.log("Hello.</span>
-					<span class="waving-hand mr-5 font-roboto text-5xl font-bold">👋</span>
-					<span class="mr-5 font-roboto text-5xl font-bold">I'm</span>
+					<span>console.log("Hello.</span>
+					<span class="waving-hand">👋</span>
+					<span class="mr-2 md:mr-5">I'm</span>
 				</Typewriter>
 
 				<!-- Second typewriter effect for dynamic names -->
@@ -60,13 +62,13 @@
 						unwriteInterval={30}
 						class="flex items-center"
 					>
-						<span class="font-roboto text-5xl font-bold">Timmy")</span>
-						<span class="font-roboto text-5xl font-bold">Jimmy")</span>
+						<span>Timmy")</span>
+						<span>Jimmy")</span>
 					</Typewriter>
 				{/if}
 			</div>
 
-			<h3 class="mb-7 mt-4 text-xl text-gray-500/100 dark:text-gray-300/100">
+			<h3 class="mb-7 mt-4 text-base text-gray-500/100 dark:text-gray-300/100 md:text-2xl">
 				I deliver web experiences built to industry standards. Take a look around!
 			</h3>
 			<!-- Call-to-action buttons -->
