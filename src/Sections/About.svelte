@@ -29,7 +29,7 @@
 
 	<div
 		data-aos="slide-right"
-		data-aos-duration="500"
+		data-aos-duration="300"
 		data-aos-delay="200"
 		class="moving-gradient-2 absolute left-0 z-0 h-[80vh] w-[30vw]"
 	></div>
@@ -38,9 +38,9 @@
 		<div class="flex h-[50vh] flex-row items-center justify-center">
 			<div class="mt-28 h-[50vh] rounded-sm">
 				<img
-					data-aos="slide-right"
+					data-aos="fade-down"
 					data-aos-duration="500"
-					data-aos-delay="200"
+					data-aos-delay="500"
 					class="h-full rounded-sm"
 					src="assets\images\jimmyAbout5.png"
 					alt="Jimmy Van About"
@@ -51,7 +51,12 @@
 					<SectionHeader title="ABOUT ME" />
 				</header>
 
-				<div class="flex h-[50vh] flex-col items-center justify-center rounded-sm bg-[#2a374a]">
+				<div
+					data-aos="fade-up"
+					data-aos-duration="500"
+					data-aos-delay="500"
+					class="flex h-[50vh] flex-col items-center justify-center rounded-sm bg-[#2a374a]"
+				>
 					<article class="font-nunito row m-14 flex h-full flex-col justify-evenly text-xl">
 						<span
 							><span class=" text-5xl">W</span>hat's up? I’m Bob, a software developer with
