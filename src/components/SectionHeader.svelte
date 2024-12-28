@@ -1,31 +1,24 @@
 <script lang="ts">
 	import Typewriter from 'svelte-typewriter';
-	import { onMount } from 'svelte';
+	import { inview } from 'svelte-inview';
 
 	let { title }: { title: string } = $props();
-	let isVisible = $state(false); // Tracks if the component is in view
-
-	// Observe the component's visibility
-	onMount(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				isVisible = entry.isIntersecting; // Update visibility
-			},
-			{ threshold: 0.5 } // Adjust threshold as needed
-		);
-
-		const element = document.getElementById('about');
-		if (element) {
-			observer.observe(element);
-		}
-
-		// Cleanup observer on component destroy
-		return () => observer.disconnect();
-	});
+	let isInView = $state(false);
+	const options = {};
 </script>
 
-<div>
-	{#if isVisible}
+<div
+	use:inview={options}
+	oninview_enter={(event) => {
+		const { inView, entry, scrollDirection, observer, node } = event.detail;
+		isInView = inView;
+	}}
+	oninview_leave={(event) => {
+		const { inView, entry, scrollDirection, observer, node } = event.detail;
+		isInView = inView;
+	}}
+>
+	{#if isInView}
 		<Typewriter mode="scramble" scrambleDuration={1500}>
 			<h1 class="mb-10 font-roboto text-5xl font-bold tracking-wide md:text-7xl">{title}</h1>
 		</Typewriter>

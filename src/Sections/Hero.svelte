@@ -42,7 +42,6 @@
 					cursor={true}
 					interval={50}
 					keepCursorOnFinish={false}
-					showCursorOnDelay={true}
 					mode="cascade"
 					on:done={() => (typewriterStage += 1)}
 				>
@@ -57,7 +56,6 @@
 						cursor={true}
 						interval={50}
 						keepCursorOnFinish={true}
-						showCursorOnDelay={true}
 						mode="loopOnce"
 						unwriteInterval={30}
 						class="flex items-center"

@@ -34,6 +34,7 @@
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
+		"svelte-inview": "^4.0.4",
 		"svelte-typewriter": "^3.2.3"
 	}
 }
