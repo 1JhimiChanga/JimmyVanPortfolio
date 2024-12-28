@@ -1,29 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import SectionHeader from '../components/SectionHeader.svelte';
-
-	//Controls the landing animation state
-	let landed = $state(false);
-
-	onMount(() => {
-		landed = true;
-	});
-
-	// vertical open animation for logo, title, and toggle theme button
-	function verticalOpen(node: HTMLElement, { duration = 400 } = {}) {
-		return {
-			duration,
-			css: (t: number) => `
-            transform: scaleY(${t});
-            transform-origin: center;
-        `
-		};
-	}
 </script>
 
 <section
 	id="about"
-	class="flex h-[80vh] w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-gray-900/90"
+	class="flex h-screen w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-gray-900/90 lg:h-[80vh]"
 >
 	<!-- Check if the landing animation should run -->
 
@@ -31,22 +12,24 @@
 		data-aos="slide-right"
 		data-aos-duration="300"
 		data-aos-delay="200"
-		class="moving-gradient-2 absolute left-0 z-0 h-[80vh] w-[30vw]"
+		class="moving-gradient-2 absolute left-0 z-0 h-screen w-[40vw] md:w-[30vw] lg:h-[80vh]"
 	></div>
 
-	<div class="z-10 flex flex-col items-center justify-center">
-		<div class="flex h-[50vh] flex-row items-center justify-center">
-			<div class="mt-28 h-[50vh] rounded-sm">
+	<div class="z-10 ml-5 mr-5 flex flex-col items-center justify-center">
+		<div
+			class="flex h-[50vh] w-full flex-col-reverse items-center justify-center lg:h-[60vh] lg:flex-row"
+		>
+			<div class="mt-5 h-5/6 w-full rounded-sm lg:mt-28 lg:w-auto">
 				<img
 					data-aos="fade-down"
 					data-aos-duration="500"
 					data-aos-delay="500"
-					class="h-full rounded-sm"
+					class="h-full w-full rounded-sm object-cover lg:w-auto"
 					src="assets\images\jimmyAbout5.png"
 					alt="Jimmy Van About"
 				/>
 			</div>
-			<div class="ml-10 flex w-4/12 flex-col">
+			<div class="flex w-full flex-col md:w-[50vh] lg:ml-5 xl:w-4/12">
 				<header class="self-end">
 					<SectionHeader title="ABOUT ME" />
 				</header>
@@ -55,22 +38,23 @@
 					data-aos="fade-up"
 					data-aos-duration="500"
 					data-aos-delay="500"
-					class="flex h-[50vh] flex-col items-center justify-center rounded-sm bg-[#2a374a]"
+					class="flex h-auto w-full flex-col items-center justify-center rounded-sm bg-white/100 shadow-2xl dark:bg-[#2a374a]"
 				>
-					<article class="font-nunito row m-14 flex h-full flex-col justify-evenly text-xl">
-						<span
-							><span class=" text-5xl">W</span>hat's up? I’m Bob, a software developer with
-							expertise in web development. Currently, I am a Computer Science specialist at
-							University of Toronto.</span
+					<article
+						class="font-nunito row m-5 flex h-full flex-col justify-evenly text-base lg:m-10 xl:text-xl"
+					>
+						<span class="mb-5"
+							><span class="text-4xl">H</span>owdy! I’m Jimmy, a software developer with expertise
+							in web development. Currently, I am a Full-Stack Developer for Crbon Labs.</span
 						>
-						<span
-							>The passion to create and innovate has always been in me. I strive to build quality,
-							clean, intuitive, and robust software with attention and deliberation.</span
+						<span class="mb-5"
+							>For me, software development is about bringing ideas to life with clean, efficient,
+							and intuitive designs that prioritize user experience.</span
 						>
-						<span
-							>My expertise include JavaScript, CSS, and the MERN stack. Recently I have been
-							intrigue with blockchain tech and Web3. Aside from coding, I enjoy playing table
-							tennis, video games, and the drums.</span
+						<span class="mb-5"
+							>My expertise include JavaScript, CSS, and the MERN stack, with a recent fascination
+							for Svelte, which inspired me to create this web application! Aside from coding, I
+							enjoy playing volleyball, badminton, video games, and billiards.</span
 						>
 					</article>
 				</div>

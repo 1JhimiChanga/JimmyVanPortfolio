@@ -27,7 +27,7 @@
 <div>
 	{#if isVisible}
 		<Typewriter mode="scramble" scrambleDuration={1500}>
-			<h1 class="mb-10 font-roboto text-7xl font-bold tracking-wide">{title}</h1>
+			<h1 class="mb-10 font-roboto text-5xl font-bold tracking-wide md:text-7xl">{title}</h1>
 		</Typewriter>
 	{/if}
 </div>
