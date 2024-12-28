@@ -6,19 +6,19 @@
 	id="about"
 	class="flex h-screen w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-gray-900/90 lg:h-[80vh]"
 >
-	<!-- Check if the landing animation should run -->
-
+	<!-- Gradient background animation for the "about" section -->
 	<div
 		data-aos="slide-right"
 		data-aos-duration="500"
 		data-aos-delay="200"
 		class="moving-gradient-2 absolute left-0 z-0 h-screen w-[40vw] md:w-[30vw] lg:h-[80vh]"
 	></div>
-
+	<!-- Content of the "about" section -->
 	<div class="z-10 ml-5 mr-5 flex flex-col items-center justify-center">
 		<div
 			class="flex h-[50vh] w-full flex-col-reverse items-center justify-center lg:h-[60vh] lg:flex-row"
 		>
+			<!-- Image -->
 			<div class="mt-5 h-5/6 w-full rounded-sm lg:mt-28 lg:w-auto">
 				<img
 					data-aos="fade-down"
@@ -29,6 +29,7 @@
 					alt="Jimmy Van About"
 				/>
 			</div>
+			<!-- Text content -->
 			<div class="flex w-full flex-col md:w-[50vh] lg:ml-5 xl:w-4/12">
 				<header class="self-end">
 					<SectionHeader title="ABOUT ME" />
