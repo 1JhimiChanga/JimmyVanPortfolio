@@ -153,6 +153,7 @@
 							{#if menuButtonsVisible}
 								<a
 									href={'#' + button}
+									onclick={() => (menuOpen = false)}
 									transition:fly={{
 										x: index % 2 === 0 ? -400 : 400,
 										delay: 50,

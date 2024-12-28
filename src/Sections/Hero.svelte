@@ -30,19 +30,18 @@
 	{/if}
 	<!-- Main container for the introduction text -->
 	<div
-		class=" absolute flex h-2/6 w-11/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90 sm:w-10/12 md:w-10/12 lg:w-8/12 2xl:w-5/12"
+		class=" absolute ml-5 mr-5 flex h-2/6 w-11/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
 	>
 		<div class="absolute ml-5 hidden h-3/6 w-1 bg-[#d8b4fe] md:flex"></div>
 		<div class="ml-6 md:ml-14">
 			<div
-				class="flex flex-row items-baseline font-roboto text-lg font-bold md:text-2xl lg:text-3xl xl:text-4xl"
+				class="flex flex-row items-baseline font-roboto text-base font-bold md:text-2xl lg:text-3xl xl:text-4xl"
 			>
 				<!-- Typewriter effect for the introductory text -->
 				<Typewriter
 					cursor={true}
 					interval={50}
 					keepCursorOnFinish={false}
-					showCursorOnDelay={true}
 					mode="cascade"
 					on:done={() => (typewriterStage += 1)}
 				>
@@ -57,7 +56,6 @@
 						cursor={true}
 						interval={50}
 						keepCursorOnFinish={true}
-						showCursorOnDelay={true}
 						mode="loopOnce"
 						unwriteInterval={30}
 						class="flex items-center"
@@ -68,8 +66,11 @@
 				{/if}
 			</div>
 
-			<h3 class="mb-7 mt-4 text-base text-gray-500/100 dark:text-gray-300/100 md:text-2xl">
-				I deliver web experiences built to industry standards. Take a look around!
+			<h3
+				class="mb-7 mr-10 mt-4 w-10/12 text-wrap text-base text-gray-500/100 dark:text-gray-300/100 md:text-2xl lg:text-nowrap"
+			>
+				<p>I deliver web experiences built to industry standards.</p>
+				<p>Take a look around!</p>
 			</h3>
 			<!-- Call-to-action buttons -->
 			<button

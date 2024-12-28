@@ -12,7 +12,8 @@ export default {
 				'custom-white-theme': '#f9fafb'
 			},
 			fontFamily: {
-				roboto: ['Roboto', 'monospace'] // Add 'Roboto' with monospace fallback
+				roboto: ['Roboto', 'monospace'],
+				nunito: ['Nunito', 'sans']
 			}
 		}
 	},
