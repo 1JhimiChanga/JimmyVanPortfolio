@@ -10,7 +10,7 @@
 
 	<div
 		data-aos="slide-right"
-		data-aos-duration="300"
+		data-aos-duration="500"
 		data-aos-delay="200"
 		class="moving-gradient-2 absolute left-0 z-0 h-screen w-[40vw] md:w-[30vw] lg:h-[80vh]"
 	></div>
@@ -23,7 +23,7 @@
 				<img
 					data-aos="fade-down"
 					data-aos-duration="500"
-					data-aos-delay="500"
+					data-aos-delay="600"
 					class="h-full w-full rounded-sm object-cover lg:w-auto"
 					src="assets\images\jimmyAbout5.png"
 					alt="Jimmy Van About"
@@ -37,7 +37,7 @@
 				<div
 					data-aos="fade-up"
 					data-aos-duration="500"
-					data-aos-delay="500"
+					data-aos-delay="600"
 					class="flex h-auto w-full flex-col items-center justify-center rounded-sm bg-white/100 shadow-2xl dark:bg-[#2a374a]"
 				>
 					<article

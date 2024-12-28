@@ -8,7 +8,8 @@
 			// AOS settings (optional)
 			duration: 1000, // Animation duration in ms
 			offset: 200, // Trigger offset in px
-			mirror: true
+			mirror: true,
+			once: false
 		});
 	});
 </script>

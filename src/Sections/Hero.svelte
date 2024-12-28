@@ -45,7 +45,7 @@
 					mode="cascade"
 					on:done={() => (typewriterStage += 1)}
 				>
-					<span class="-mr-3">console.log("Hello.</span>
+					<span>console.log("Hello.</span>
 					<span class="waving-hand">👋</span>
 					<span class="mr-2 md:mr-5">I'm</span>
 				</Typewriter>
