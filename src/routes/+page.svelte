@@ -7,7 +7,7 @@
 		AOS.init({
 			// AOS settings (optional)
 			duration: 1000, // Animation duration in ms
-			offset: 200, // Trigger offset in px
+			offset: 100, // Trigger offset in px
 			mirror: true,
 			once: false
 		});

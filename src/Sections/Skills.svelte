@@ -18,7 +18,7 @@
 
 <section
 	id="skills"
-	class="flex h-full min-h-[85vh] w-full items-center justify-center bg-custom-white-theme dark:bg-[#2a374a] md:min-h-[80vh] xl:min-h-[60vh]"
+	class="relative flex h-full min-h-[75vh] w-full items-center justify-center bg-custom-white-theme dark:bg-[#2a374a] md:min-h-[60vh] xl:min-h-[50vh]"
 >
 	<div class="flex h-full w-9/12 flex-col">
 		<SectionHeader title="SKILLS" />

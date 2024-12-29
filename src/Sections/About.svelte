@@ -4,33 +4,30 @@
 
 <section
 	id="about"
-	class="flex h-screen w-full flex-row items-center justify-center bg-gray-100 dark:bg-gray-900/90 lg:h-[80vh]"
+	class="relative flex h-fit w-full flex-row items-center justify-center bg-gray-100 dark:bg-gray-900/90"
 >
 	<!-- Gradient background animation for the "about" section -->
 	<div
 		data-aos="slide-right"
 		data-aos-duration="500"
 		data-aos-delay="200"
-		class="moving-gradient-2 absolute left-0 z-0 h-screen w-[40vw] md:w-[30vw] lg:h-[80vh]"
+		class="moving-gradient-2 absolute bottom-0 left-0 right-0 top-0 z-0 w-[40vw] md:w-[30vw]"
 	></div>
 	<!-- Content of the "about" section -->
-	<div class="z-10 ml-5 mr-5 flex flex-col items-center justify-center">
-		<div
-			class="flex h-[50vh] w-full flex-col-reverse items-center justify-center lg:h-[60vh] lg:flex-row"
-		>
+	<div class="z-10 m-5 flex flex-col items-center justify-center md:m-20">
+		<div class="flex h-fit w-full flex-col-reverse items-center justify-center lg:flex-row">
 			<!-- Image -->
-			<div class="mt-5 h-5/6 w-full rounded-sm lg:mt-28 lg:w-auto">
-				<img
-					data-aos="fade-down"
-					data-aos-duration="500"
-					data-aos-delay="600"
-					class="h-full w-full rounded-sm object-cover lg:w-auto"
-					src="assets\images\jimmyAbout5.png"
-					alt="Jimmy Van About"
-				/>
-			</div>
+
+			<img
+				data-aos="fade-down"
+				data-aos-duration="500"
+				data-aos-delay="600"
+				class="mt-5 w-full rounded-sm object-scale-down lg:w-[40vw] xl:w-[30vw]"
+				src="assets\images\jimmyAbout5.png"
+				alt="Jimmy Van About"
+			/>
 			<!-- Text content -->
-			<div class="flex w-full flex-col md:w-[50vh] lg:ml-5 xl:w-4/12">
+			<div class="flex w-full flex-col lg:ml-5">
 				<header class="min-h-[100px] self-end">
 					<SectionHeader title="ABOUT ME" />
 				</header>
@@ -39,7 +36,7 @@
 					data-aos="fade-up"
 					data-aos-duration="500"
 					data-aos-delay="600"
-					class="flex h-auto w-full flex-col items-center justify-center rounded-sm bg-white/100 shadow-2xl dark:bg-[#2a374a]"
+					class="flex h-auto w-full flex-col items-center justify-center rounded-sm bg-white/100 shadow-2xl dark:bg-[#2a374a] lg:max-w-[40vw]"
 				>
 					<article
 						class="font-nunito row m-5 flex h-full flex-col justify-evenly text-base lg:m-10 xl:text-xl"
