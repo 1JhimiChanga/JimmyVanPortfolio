@@ -14,7 +14,7 @@
 		class="moving-gradient-2 absolute bottom-0 left-0 right-0 top-0 z-0 w-[40vw] md:w-[30vw]"
 	></div>
 	<!-- Content of the "about" section -->
-	<div class="z-10 m-5 flex flex-col items-center justify-center md:m-20">
+	<div class="z-10 m-10 flex flex-col items-center justify-center md:m-20">
 		<div class="flex h-fit w-full flex-col-reverse items-center justify-center lg:flex-row">
 			<!-- Image -->
 
