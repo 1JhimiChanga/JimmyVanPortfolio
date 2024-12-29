@@ -4,7 +4,7 @@
 
 <section
 	id="about"
-	class="flex h-screen w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-gray-900/90 lg:h-[80vh]"
+	class="flex h-screen w-full flex-row items-center justify-center bg-gray-100 dark:bg-gray-900/90 lg:h-[80vh]"
 >
 	<!-- Gradient background animation for the "about" section -->
 	<div
@@ -31,7 +31,7 @@
 			</div>
 			<!-- Text content -->
 			<div class="flex w-full flex-col md:w-[50vh] lg:ml-5 xl:w-4/12">
-				<header class="self-end">
+				<header class="min-h-[100px] self-end">
 					<SectionHeader title="ABOUT ME" />
 				</header>
 

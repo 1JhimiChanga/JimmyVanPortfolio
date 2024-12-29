@@ -30,7 +30,7 @@
 	{/if}
 	<!-- Main container for the introduction text -->
 	<div
-		class=" absolute ml-5 mr-5 flex h-2/6 w-11/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
+		class=" absolute ml-5 mr-5 flex h-2/6 w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
 	>
 		<div class="absolute ml-5 hidden h-3/6 w-1 bg-[#d8b4fe] md:flex"></div>
 		<div class="ml-6 md:ml-14">
