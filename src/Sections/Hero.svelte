@@ -30,10 +30,10 @@
 	{/if}
 	<!-- Main container for the introduction text -->
 	<div
-		class=" absolute ml-5 mr-5 flex h-2/6 w-11/12 flex-col items-start justify-center bg-white/100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
+		class=" absolute ml-5 mr-5 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
 	>
 		<div class="absolute ml-5 hidden h-3/6 w-1 bg-[#d8b4fe] md:flex"></div>
-		<div class="ml-6 md:ml-14">
+		<div class="m-14 ml-6 md:ml-14">
 			<div
 				class="flex flex-row items-baseline font-roboto text-base font-bold md:text-2xl lg:text-3xl xl:text-4xl"
 			>
@@ -67,22 +67,27 @@
 			</div>
 
 			<h3
-				class="mb-7 mr-10 mt-4 w-10/12 text-wrap text-base text-gray-500/100 dark:text-gray-300/100 md:text-2xl lg:text-nowrap"
+				data-aos="fade-left"
+				data-aos-duration="500"
+				data-aos-delay="300"
+				class="mb-7 mr-10 mt-4 w-full text-wrap text-base text-gray-500/100 dark:text-gray-300/100 md:text-2xl lg:text-nowrap"
 			>
 				<p>I deliver web experiences built to industry standards.</p>
 				<p>Take a look around!</p>
 			</h3>
 			<!-- Call-to-action buttons -->
-			<button
-				class={'mr-3 h-8 w-32 rounded-sm border-[2px] border-[#7dd3fc]  bg-blue-200 hover:bg-blue-300'}
-			>
-				<span class="text-md text-center font-medium text-black">View Resume</span>
-			</button>
-			<button
-				class={'h-8 w-32  rounded-sm border-[2px] border-[#6ee7b7] bg-green-200 hover:bg-green-300'}
-			>
-				<span class="text-md text-center font-medium text-black">Reach Out</span>
-			</button>
+			<div data-aos="fade-left" data-aos-duration="500" data-aos-delay="300">
+				<button
+					class={'mr-3 h-8 w-32 rounded-sm border-[2px] border-[#7dd3fc]  bg-blue-200 hover:bg-blue-300'}
+				>
+					<span class="text-md text-center font-medium text-black">View Resume</span>
+				</button>
+				<button
+					class={'h-8 w-32  rounded-sm border-[2px] border-[#6ee7b7] bg-green-200 hover:bg-green-300'}
+				>
+					<span class="text-md text-center font-medium text-black">Reach Out</span>
+				</button>
+			</div>
 		</div>
 	</div>
 </section>
