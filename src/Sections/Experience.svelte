@@ -11,7 +11,9 @@
 		class={(index % 2 === 0 ? 'moving-gradient-1' : 'moving-gradient-2') +
 			' relative mb-5 h-fit w-full rounded-md p-[3px] shadow-2xl sm:w-11/12 md:w-10/12 lg:w-10/12 xl:w-11/12'}
 	>
-		<div class="h-full overflow-y-hidden rounded-md bg-gray-100 p-4 font-roboto dark:bg-gray-900">
+		<div
+			class="clip-corner h-full overflow-y-hidden rounded-md bg-gray-100 p-4 font-roboto dark:bg-gray-900"
+		>
 			<h1 class="font-nunito text-xl font-bold tracking-wide">{experience.company}</h1>
 			{#each experience.roles as role}
 				<div class="flex flex-row justify-between">
@@ -59,3 +61,11 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	:global(.clip-corner) {
+		position: relative;
+		background: white; /* Default card background color */
+		clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%);
+	}
+</style>
