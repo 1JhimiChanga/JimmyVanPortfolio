@@ -27,10 +27,11 @@
 		"skills": [
 			{ "label": "JavaScript", "icon": "javascript.svg" },
 			{ "label": "MongoDB", "icon": "mongodb-icon.svg" },
-			{ "label": "Express", "icon": "express.svg" },
+
 			{ "label": "React", "icon": "react.svg" },
 			{ "label": "Node", "icon": "nodejs-icon-alt.svg" },
-			{ "label": "Insomnia", "icon": "insomnia.svg" }
+			{ "label": "Insomnia", "icon": "insomnia.svg" },
+			{ "label": "Express" }
 		],
 		"achievements": [
 			"Developed and implemented a web application using the MERN stack (MongoDB, Express, React, Node.js) to allow users to generate detailed emission summary reports for oil and gas facilities.",

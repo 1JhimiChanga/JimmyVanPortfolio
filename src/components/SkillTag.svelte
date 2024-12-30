@@ -13,13 +13,9 @@
 	data-aos-duration="500"
 	data-aos-delay="500"
 >
-	<div
-		class={skill.label === 'Express'
-			? 'dark:flex dark:h-full dark:justify-center dark:bg-gray-200/65'
-			: ''}
-	>
+	{#if skill.icon}
 		<img class={'m-2 h-5'} src={'/assets/icons/' + skill.icon} alt={skill.label + ' Icon'} />
-	</div>
+	{/if}
 
 	<span class="p-2 tracking-wide">{skill.label}</span>
 </button>
