@@ -13,7 +13,11 @@
 	data-aos-duration="500"
 	data-aos-delay="500"
 >
-	<div class={skill.label === 'Express' ? 'bg-gray-200/80 p-1' : ''}>
+	<div
+		class={skill.label === 'Express'
+			? 'dark:flex dark:h-full dark:justify-center dark:bg-gray-200/65'
+			: ''}
+	>
 		<img class={'m-2 h-5'} src={'/assets/icons/' + skill.icon} alt={skill.label + ' Icon'} />
 	</div>
 
