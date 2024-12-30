@@ -49,7 +49,7 @@
 	<div class="relative z-10 flex h-full w-full flex-col items-center justify-center">
 		<div class="flex h-full flex-col items-center justify-center">
 			<div class="m-5 flex w-11/12 flex-col items-center justify-center">
-				<div class="self-end">
+				<div class="mb-10 self-end">
 					<SectionHeader title="EXPERIENCE" />
 				</div>
 				{#each experiences as experience, index}
