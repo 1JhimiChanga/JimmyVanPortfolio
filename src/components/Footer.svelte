@@ -5,8 +5,8 @@
 	<div class="flex h-full flex-col items-center justify-between p-14">
 		<div
 			data-aos="fade-down"
-			data-aos-duration="1000"
-			data-aos-delay="100"
+			data-aos-duration="700"
+			data-aos-delay="300"
 			class="mb-2 flex h-full flex-row items-center justify-center"
 		>
 			<a
