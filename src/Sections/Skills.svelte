@@ -7,7 +7,7 @@
 		{ label: 'CSS', icon: 'css-3.svg' },
 		{ label: 'React', icon: 'react.svg' },
 		{ label: 'Material UI', icon: 'material-ui.svg' },
-		{ label: 'TailwindCSS', icon: 'tailwindcss-icon.svg' },
+		{ label: 'Tailwind', icon: 'tailwindcss-icon.svg' },
 		{ label: 'Node', icon: 'nodejs-icon-alt.svg' },
 		{ label: 'Git', icon: 'git-icon.svg' },
 		{ label: 'MongoDB', icon: 'mongodb-icon.svg' },
@@ -31,7 +31,7 @@
 						(index % 2 === 0 ? 'hover:bg-green-200' : 'hover:bg-blue-200')}
 					data-aos="flip-down"
 					data-aos-duration="500"
-					data-aos-delay="300"
+					data-aos-delay="500"
 				>
 					<img
 						class="m-2 h-5"
