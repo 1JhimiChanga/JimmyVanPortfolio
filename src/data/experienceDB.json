@@ -1,0 +1,60 @@
+[
+	{
+		"company": "Carbon Labs Inc.",
+		"roles": [{ "title": "Full Stack Software Developer", "dateRange": "Jan 2023 – Present" }],
+		"skills": [
+			{ "label": "TypeScript", "icon": "typescript-icon.svg" },
+			{ "label": "JavaScript", "icon": "javascript.svg" },
+
+			{ "label": "Git", "icon": "git-icon.svg" },
+			{ "label": "Mapbox", "icon": "mapbox-icon.svg" },
+			{ "label": "Jest", "icon": "jest.svg" },
+			{ "label": "MSW", "icon": "msw-icon.svg" },
+			{ "label": "Material UI", "icon": "material-ui.svg" },
+			{ "label": "AWS Services", "icon": "aws.svg" }
+		],
+		"achievements": [
+			"Designed and developed a map-based application showcasing over 1.5 million oil/gas facilities and electrical infrastructure elements, achieving a 200% improvement in rendering speed and optimizing user interaction with geospatial data.",
+			"Led frontend development with React and TypeScript, creating dynamic map interactions with Mapbox and enhancing the user experience for high-density geospatial data.",
+			"Designed, implemented, and tested serverless backend APIs using AWS CDK, Lambda, API Gateway, and DynamoDB, supporting secure user authentication (Cognito) and efficient data retrieval."
+		]
+	},
+	{
+		"company": "Breakwater Vantage",
+		"roles": [
+			{ "title": "Contract: Full-Stack Software Developer", "dateRange": "Feb 2023 – Jul 2023" }
+		],
+		"skills": [
+			{ "label": "JavaScript", "icon": "javascript.svg" },
+			{ "label": "MongoDB", "icon": "mongodb-icon.svg" },
+			{ "label": "Express", "icon": "express.svg" },
+			{ "label": "React", "icon": "react.svg" },
+			{ "label": "Node", "icon": "nodejs-icon-alt.svg" },
+			{ "label": "Insomnia", "icon": "insomnia.svg" }
+		],
+		"achievements": [
+			"Developed and implemented a web application using the MERN stack (MongoDB, Express, React, Node.js) to allow users to generate detailed emission summary reports for oil and gas facilities.",
+			"Designed and developed a mobile-optimised version of a web application, adapting a desktop-only prototype to create a seamless, responsive user experience across devices.",
+			"Maintained deadline commitments despite evolving requirements, balancing design changes and new features with efficient time management."
+		]
+	},
+	{
+		"company": "The Captain’s Boil",
+		"roles": [
+			{
+				"title": "Line Cook",
+				"dateRange": "Mar 2018 – Sept 2019"
+			},
+			{
+				"title": "Kitchen Manager",
+				"dateRange": "Sept 2019 – Apr 2021"
+			}
+		],
+		"location": "Calgary, AB",
+		"achievements": [
+			"Optimised kitchen operations by effectively organising staff and delegating tasks, ensuring a smooth and efficient workflow during peak hours.",
+			"Managed inventory tracking and ordering, leveraging data analysis to identify patterns and trends that improved inventory forecasting and minimised waste.",
+			"Honed leadership skills by managing operations as the focal point in a high-pressure, fast-paced kitchen environment, ensuring team performance and quality control."
+		]
+	}
+]
