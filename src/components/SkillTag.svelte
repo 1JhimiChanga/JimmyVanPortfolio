@@ -17,5 +17,5 @@
 		<img class={'m-2 h-5'} src={'/assets/icons/' + skill.icon} alt={skill.label + ' Icon'} />
 	{/if}
 
-	<span class="p-2 tracking-wide">{skill.label}</span>
+	<span class="px-1 py-2 tracking-wide">{skill.label}</span>
 </button>

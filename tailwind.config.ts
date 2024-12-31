@@ -14,6 +14,12 @@ export default {
 			fontFamily: {
 				roboto: ['Roboto', 'monospace'],
 				nunito: ['Nunito', 'sans']
+			},
+			dropShadow: {
+				glow: [
+					'0 0px 2px rgb(216 180 254 / var(--tw-bg-opacity, 0.1)) ',
+					'0 0px 2px rgb(216 180 254 / var(--tw-bg-opacity, 0.1)) '
+				]
 			}
 		}
 	},

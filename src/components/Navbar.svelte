@@ -11,7 +11,7 @@
 		toggleTheme: () => void;
 	} = $props();
 
-	let BUTTONS = ['about', 'skills', 'experience', 'contact', 'resume'];
+	let BUTTONS = ['about', 'skills', 'experience', 'contact'];
 	let buttonsVisible = $state(false);
 	let menuButtonsVisible = $state(false);
 	let menuOpen = $state(false);
