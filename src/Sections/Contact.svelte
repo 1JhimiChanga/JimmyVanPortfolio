@@ -19,25 +19,25 @@
 	>
 		<div class="absolute ml-5 hidden h-3/6 w-1.5 bg-[#d8b4fe] md:flex"></div>
 		<div class="m-10 ml-6 flex w-10/12 flex-col md:ml-14 lg:w-auto lg:flex-row">
-			<div class="w-full lg:w-5/12">
+			<div class="m-0 w-full lg:ml-10 lg:mr-10 lg:w-5/12">
 				<SectionHeader title="CONTACT ME" />
-				<h2 class="w-full lg:w-4/5">
-					Shoot me a message and I will get back to you as soon as I can. My emails are
-					ngbobshoaun2000@gmail.com and bobshoaun.ng@mail.utoronto.ca
+				<h2 class="w-full text-lg lg:w-4/5">
+					Shoot me a message and I will get back to you as soon as I can. My email is
+					jvan709@gmail.com
 				</h2>
 			</div>
-			<form class="mt-5 flex w-full flex-col lg:mt-0 lg:w-7/12" onsubmit={sendEmail}>
+			<form class="mt-5 flex w-full flex-col lg:mt-3 lg:w-7/12" onsubmit={sendEmail}>
 				<input
 					name="name"
 					bind:value={formData.name}
-					class="form__input"
+					class="form__input bg-custom-white-theme dark:bg-[#2a374a]"
 					type="text"
 					placeholder="Your name"
 					required
 				/>
 				<input
 					bind:value={formData.email}
-					class="form__input"
+					class="form__input bg-custom-white-theme dark:bg-[#2a374a]"
 					type="email"
 					placeholder="Your email"
 					required
@@ -45,7 +45,7 @@
 				<textarea
 					bind:value={formData.message}
 					rows="10"
-					class="form__input"
+					class="form__input bg-custom-white-theme dark:bg-[#2a374a]"
 					placeholder="Tell me what you think!"
 					required
 				></textarea>
@@ -72,10 +72,9 @@
 	/* Default input and textarea styles */
 	.form__input {
 		margin-bottom: 1rem;
-		background-color: #2a374a;
 		padding: 0.5rem 1rem;
 		border-radius: 2px;
-		color: white; /* Text color */
+		color: white;
 	}
 
 	.form__input::placeholder {

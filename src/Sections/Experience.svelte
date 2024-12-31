@@ -9,10 +9,10 @@
 		data-aos={index % 2 === 0 ? 'slide-right' : 'slide-left'}
 		data-aos-duration="500"
 		class={(index % 2 === 0 ? 'moving-gradient-1' : 'moving-gradient-2') +
-			' relative mb-5 h-fit w-full rounded-md p-[3px] shadow-2xl sm:w-11/12 md:w-10/12 lg:w-10/12 xl:w-11/12'}
+			' relative mb-5 h-fit w-full rounded-md p-[3px] shadow-2xl sm:w-11/12 md:w-10/12 lg:w-10/12 xl:w-11/12 '}
 	>
 		<div
-			class="clip-corner h-full overflow-hidden rounded-md bg-gray-100 p-4 font-roboto dark:bg-gray-900"
+			class="clip-corner h-full overflow-hidden rounded-md bg-custom-white-theme p-4 font-roboto dark:bg-gray-900"
 		>
 			<h1 class="font-nunito text-xl font-bold tracking-wide">{experience.company}</h1>
 			{#each experience.roles as role}
