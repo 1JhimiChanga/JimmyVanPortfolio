@@ -91,7 +91,7 @@
 		<img
 			transition:verticalOpen
 			class=" h-10 w-10"
-			src="assets\images\Jlogo.jpg"
+			src="assets\icons\Jlogo.jpg"
 			alt="Jimmy Van Logo"
 		/>
 		<a transition:verticalOpen href="/#home" data-aos="flip-up" class="nav__text-home px-2"
