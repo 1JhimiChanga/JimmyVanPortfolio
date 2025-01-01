@@ -28,7 +28,7 @@
 			</a>
 		</div>
 
-		<div class="flex flex-col items-center space-y-1 font-roboto">
+		<div class="xs:space-y-8 flex flex-col items-center font-roboto sm:space-y-1">
 			<a
 				href="https://github.com/1JhimiChanga/JimmyVanPortfolio"
 				class="nav__text"

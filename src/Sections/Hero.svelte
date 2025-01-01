@@ -35,7 +35,7 @@
 		<div class="absolute ml-5 hidden h-3/6 w-1 bg-[#d8b4fe] md:flex"></div>
 		<div class="m-14 ml-6 md:ml-14">
 			<div
-				class="flex flex-row items-baseline font-roboto text-base font-bold md:text-2xl lg:text-3xl xl:text-4xl"
+				class="flex min-h-14 flex-col items-baseline font-roboto text-base font-bold md:min-h-fit md:flex-row md:text-2xl lg:text-3xl xl:text-4xl"
 			>
 				<!-- Typewriter effect for the introductory text -->
 				<Typewriter

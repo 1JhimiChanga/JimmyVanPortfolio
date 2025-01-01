@@ -20,6 +20,9 @@ export default {
 					'0 0px 2px rgb(216 180 254 / var(--tw-bg-opacity, 0.1)) ',
 					'0 0px 2px rgb(216 180 254 / var(--tw-bg-opacity, 0.1)) '
 				]
+			},
+			screens: {
+				xs: '0px'
 			}
 		}
 	},
