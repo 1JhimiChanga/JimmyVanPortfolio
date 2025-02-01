@@ -39,6 +39,6 @@
 		"svelte-typewriter": "^3.2.3"
 	},
 	"engines": {
-		"node": ">=20"
+		"node": "20.x"
 	}
 }
