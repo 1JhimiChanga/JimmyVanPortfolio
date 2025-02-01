@@ -77,16 +77,18 @@
 			</h3>
 			<!-- Call-to-action buttons -->
 			<div data-aos="fade-left" data-aos-duration="500" data-aos-delay="300">
-				<button
-					class={'mr-3 h-8 w-32 rounded-sm border-[2px] border-[#7dd3fc]  bg-blue-200 hover:bg-blue-300'}
+				<a
+					href={'#resume'}
+					class={'mr-3 h-8 w-32 rounded-sm border-[2px] border-[#7dd3fc] bg-blue-200  px-2 py-1 hover:bg-blue-300'}
 				>
 					<span class="text-md text-center font-medium text-black">View Resume</span>
-				</button>
-				<button
-					class={'h-8 w-32  rounded-sm border-[2px] border-[#6ee7b7] bg-green-200 hover:bg-green-300'}
+				</a>
+				<a
+					href={'#contact'}
+					class={'h-8 w-32  rounded-sm border-[2px] border-[#6ee7b7] bg-green-200 px-3 py-1 hover:bg-green-300'}
 				>
 					<span class="text-md text-center font-medium text-black">Reach Out</span>
-				</button>
+				</a>
 			</div>
 		</div>
 	</div>

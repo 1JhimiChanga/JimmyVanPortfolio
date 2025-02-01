@@ -1,12 +1,29 @@
 <script lang="ts">
 	import SectionHeader from '../components/SectionHeader.svelte';
-
+	import emailjs from '@emailjs/browser';
 	let formData = $state({ name: '', email: '', message: '' });
 
-	function sendEmail(e: SubmitEvent) {
+	async function sendEmail(e: SubmitEvent) {
 		e.preventDefault();
-		console.log(formData);
-		console.log('email sent');
+		try {
+			const response = await emailjs.send(
+				'service_tnqs99b',
+				'template_dubzx2w',
+				{
+					from_name: formData.name,
+					from_email: formData.email,
+					message: formData.message,
+					to_name: 'Your Name'
+				},
+				'kYM-RmR5dXWHWyrEc'
+			);
+			console.log('Email sent:', response);
+			formData.message = '';
+			alert("Email sent successfully! I'll get back to you as soon as possible!");
+		} catch (error) {
+			console.error('Error sending email:', error);
+			formData.message = 'Failed to send email. Please try again.';
+		}
 	}
 </script>
 
@@ -15,9 +32,9 @@
 	class="flex h-fit w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-[#2a374a]"
 >
 	<div
-		class="m-10 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
+		class="mx-10 my-32 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
 	>
-		<div class="absolute ml-5 hidden h-3/6 w-1.5 bg-[#d8b4fe] md:flex"></div>
+		<div class="absolute ml-5 hidden h-2/6 w-1.5 bg-[#d8b4fe] md:flex"></div>
 		<div class="m-10 ml-6 flex w-10/12 flex-col md:ml-14 lg:w-auto lg:flex-row">
 			<div class="m-0 w-full lg:ml-10 lg:mr-10 lg:w-5/12">
 				<SectionHeader title="CONTACT ME" />
