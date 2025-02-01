@@ -1,4 +1,5 @@
 <script>
+	//comment
 	import SectionHeader from '../components/SectionHeader.svelte';
 	import SkillTag from '../components/SkillTag.svelte';
 	const SKILLS = [
