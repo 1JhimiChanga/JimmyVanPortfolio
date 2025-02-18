@@ -2,7 +2,7 @@
 </script>
 
 <footer class="backdrop-blue-md h-full bg-gray-100 shadow-md dark:bg-gray-900/90">
-	<div class="flex h-full flex-col items-center justify-between p-14">
+	<div class="flex h-full flex-col items-center justify-between p-4">
 		<div
 			data-aos="fade-down"
 			data-aos-duration="700"
@@ -28,7 +28,7 @@
 			</a>
 		</div>
 
-		<div class="xs:space-y-8 flex flex-col items-center font-roboto sm:space-y-1">
+		<div class="flex flex-col items-center font-roboto xs:space-y-8 sm:space-y-1">
 			<a
 				href="https://github.com/1JhimiChanga/JimmyVanPortfolio"
 				class="nav__text"
