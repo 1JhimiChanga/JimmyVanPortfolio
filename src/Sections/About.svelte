@@ -39,7 +39,7 @@
 					class="flex h-auto w-full flex-col items-center justify-center rounded-sm bg-white/100 shadow-2xl dark:bg-[#2a374a] lg:max-w-[40vw]"
 				>
 					<article
-						class="row m-5 flex h-full flex-col justify-evenly font-nunito text-base lg:m-10 xl:text-xl"
+						class="row m-5 flex h-full flex-col justify-evenly font-roboto text-base lg:m-10 xl:text-xl"
 					>
 						<span class="mb-5"
 							><span class="text-4xl">H</span>owdy! I’m Jimmy, a software developer with expertise
