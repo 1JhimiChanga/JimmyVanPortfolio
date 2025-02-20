@@ -2,7 +2,7 @@
 </script>
 
 <footer class="backdrop-blue-md h-full bg-gray-100 shadow-md dark:bg-gray-900/90">
-	<div class="flex h-full flex-col items-center justify-between p-4">
+	<div class="flex h-full flex-col items-center justify-between p-10">
 		<div
 			data-aos="fade-down"
 			data-aos-duration="700"
