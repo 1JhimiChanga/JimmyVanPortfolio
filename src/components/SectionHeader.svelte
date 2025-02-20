@@ -17,7 +17,7 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class="min-h-32"
+	class="my-5 h-8"
 >
 	{#if isInView}
 		<Typewriter mode="scramble" scrambleDuration={2000} scrambleSlowdown={true}>
