@@ -47,14 +47,14 @@
 				<input
 					name="name"
 					bind:value={formData.name}
-					class="form__input bg-custom-white-theme dark:bg-[#2a374a]"
+					class="form__input border border-gray-300 bg-custom-white-theme dark:border-none dark:bg-[#2a374a]"
 					type="text"
 					placeholder="Your name"
 					required
 				/>
 				<input
 					bind:value={formData.email}
-					class="form__input bg-custom-white-theme dark:bg-[#2a374a]"
+					class="form__input border border-gray-300 bg-custom-white-theme dark:border-none dark:bg-[#2a374a]"
 					type="email"
 					placeholder="Your email"
 					required
@@ -62,7 +62,7 @@
 				<textarea
 					bind:value={formData.message}
 					rows="10"
-					class="form__input bg-custom-white-theme dark:bg-[#2a374a]"
+					class="form__input border border-gray-300 bg-custom-white-theme dark:border-none dark:bg-[#2a374a]"
 					placeholder="Tell me what you think!"
 					required
 				></textarea>
