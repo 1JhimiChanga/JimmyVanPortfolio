@@ -38,7 +38,7 @@
 		<div class="m-10 ml-6 flex w-10/12 flex-col md:ml-14 lg:w-auto lg:flex-row">
 			<div class="m-0 w-full lg:ml-10 lg:mr-10 lg:w-5/12">
 				<SectionHeader title="CONTACT ME" />
-				<h2 class="w-full text-lg lg:w-4/5">
+				<h2 class="md w-full text-lg xs:mt-10 sm:mt-16 lg:w-4/5">
 					Shoot me a message and I will get back to you as soon as I can. My email is
 					jvan709@gmail.com
 				</h2>

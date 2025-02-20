@@ -23,7 +23,10 @@
 	class="relative flex h-full min-h-[75vh] w-full items-center justify-center bg-custom-white-theme pb-12 pt-12 dark:bg-[#2a374a] sm:min-h-[100vh] md:min-h-[60vh] xl:min-h-[50vh]"
 >
 	<div class="flex h-full w-9/12 flex-col space-y-6">
-		<SectionHeader title="SKILLS" />
+		<div class="mb-5">
+			<SectionHeader title="SKILLS" />
+		</div>
+
 		<div
 			class="grid grid-cols-2 grid-rows-5 gap-4 md:grid-cols-3 md:grid-rows-3 xl:grid-cols-6 xl:grid-rows-2"
 		>

@@ -28,7 +28,7 @@
 			/>
 			<!-- Text content -->
 			<div class="flex w-full flex-col lg:ml-5">
-				<header class="min-h-[100px] self-end">
+				<header class="mb-10 self-end">
 					<SectionHeader title="ABOUT ME" />
 				</header>
 
