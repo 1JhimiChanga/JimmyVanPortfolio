@@ -32,7 +32,7 @@
 	class="flex h-fit w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-[#2a374a]"
 >
 	<div
-		class="mx-10 my-32 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 md:w-fit"
+		class="mx-10 my-32 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 xs:mx-3 xs:my-14 md:w-fit"
 	>
 		<div class="absolute ml-5 hidden h-2/6 w-1.5 bg-[#d8b4fe] md:flex"></div>
 		<div class="m-10 ml-6 flex w-10/12 flex-col md:ml-14 lg:w-auto lg:flex-row">
