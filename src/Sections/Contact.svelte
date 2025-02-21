@@ -32,13 +32,13 @@
 	class="flex h-fit w-full flex-row items-center justify-center bg-custom-white-theme dark:bg-[#2a374a]"
 >
 	<div
-		class="mx-10 my-32 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 xs:mx-3 xs:my-14 md:w-fit"
+		class="mx-10 my-32 flex h-fit w-11/12 flex-col items-start justify-center bg-gray-100 shadow-2xl dark:bg-gray-900/90 xs:my-14 md:w-fit"
 	>
 		<div class="absolute ml-5 hidden h-2/6 w-1.5 bg-[#d8b4fe] md:flex"></div>
 		<div class="m-10 ml-6 flex w-10/12 flex-col md:ml-14 lg:w-auto lg:flex-row">
 			<div class="m-0 w-full lg:ml-10 lg:mr-10 lg:w-5/12">
 				<SectionHeader title="CONTACT ME" />
-				<h2 class="md w-full text-lg xs:mt-20 sm:mt-16 lg:mt-20 lg:w-4/5">
+				<h2 class=" w-full text-lg xs:mt-8 sm:mt-16 lg:w-4/5">
 					Shoot me a message and I will get back to you as soon as I can. My email is
 					jvan709@gmail.com
 				</h2>
