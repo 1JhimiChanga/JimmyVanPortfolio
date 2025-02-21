@@ -21,7 +21,9 @@
 >
 	{#if isInView}
 		<Typewriter mode="scramble" scrambleDuration={2000} scrambleSlowdown={true}>
-			<h1 class="mb-10 font-roboto text-5xl font-bold tracking-wide md:text-7xl">{title}</h1>
+			<h1 class="mb-10 whitespace-nowrap font-roboto text-5xl font-bold tracking-wide md:text-7xl">
+				{title}
+			</h1>
 		</Typewriter>
 	{/if}
 </div>

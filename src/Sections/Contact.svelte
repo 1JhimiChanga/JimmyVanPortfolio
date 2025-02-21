@@ -38,12 +38,12 @@
 		<div class="m-10 ml-6 flex w-10/12 flex-col md:ml-14 lg:w-auto lg:flex-row">
 			<div class="m-0 w-full lg:ml-10 lg:mr-10 lg:w-5/12">
 				<SectionHeader title="CONTACT ME" />
-				<h2 class="md w-full text-lg xs:mt-20 sm:mt-16 lg:w-4/5">
+				<h2 class="md w-full text-lg xs:mt-20 sm:mt-16 lg:mt-20 lg:w-4/5">
 					Shoot me a message and I will get back to you as soon as I can. My email is
 					jvan709@gmail.com
 				</h2>
 			</div>
-			<form class="mt-5 flex w-full flex-col lg:mt-3 lg:w-7/12" onsubmit={sendEmail}>
+			<form class="mt-5 flex w-full flex-col lg:ml-10 lg:mt-3 lg:w-7/12" onsubmit={sendEmail}>
 				<input
 					name="name"
 					bind:value={formData.name}
