@@ -2,7 +2,7 @@
 	import Typewriter from 'svelte-typewriter';
 	import { inview } from 'svelte-inview';
 
-	let { title }: { title: string } = $props();
+	let { title, minWidth }: { title: string; minWidth?: boolean } = $props();
 	let isInView = $state(false);
 	const options = {};
 </script>
@@ -17,7 +17,7 @@
 		const { inView } = event.detail;
 		isInView = inView;
 	}}
-	class="my-5 h-8"
+	class={'my-5 h-8 ' + (minWidth && 'w-96')}
 >
 	{#if isInView}
 		<Typewriter mode="scramble" scrambleDuration={2000} scrambleSlowdown={true}>
